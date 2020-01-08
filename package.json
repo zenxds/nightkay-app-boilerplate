@@ -5,7 +5,9 @@
   "main": "build/main.js",
   "scripts": {
     "start": "BABEL_ENV=development webpack-dev-server -w --open --env=development",
-    "build": "BABEL_ENV=production webpack --progress --env=production",
+    "_build": "BABEL_ENV=production webpack --progress --env=production",
+    "build": "npm run _build && npm run tar",
+    "tar": "tar zcvf build.tar.gz build",
     "prettier": "prettier --write 'src/**/*.js' 'src/**/*.jsx'",
     "test": "jest ."
   },
