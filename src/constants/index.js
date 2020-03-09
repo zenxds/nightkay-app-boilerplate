@@ -1,6 +1,7 @@
 import nightKay from 'night-kay'
 
-const { API_SERVER } = nightKay.require('constants') || API_SERVER_PLACEHOLDER
+const constants = nightKay.require('constants')
+const API_SERVER = constants.API_SERVER || API_SERVER_PLACEHOLDER
 
 export {
   API_SERVER
