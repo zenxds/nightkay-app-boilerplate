@@ -8,14 +8,12 @@ import store from './store'
 @decorators.errorBoundary
 @decorators.provider({
   actions,
-  store
+  store,
 })
 @inject('actions', 'store')
 @observer
 export default class Page extends Component {
   render() {
-    return (
-      <div>home</div>
-    )
+    return <div>home</div>
   }
 }

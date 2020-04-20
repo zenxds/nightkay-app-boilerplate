@@ -26,8 +26,12 @@ module.exports = {
     'mobx': 'MobX',
     'mobx-react': 'MobXReact',
     'antd': 'antd',
+    '@dx/xbee': 'xbee',
+    '@dx/xpanda': 'xpanda',
     '@antv/g2': 'G2',
     '@antv/data-set': 'DataSet',
+    'd3': 'D3',
+    'moment': 'moment',
     'axios': 'axios',
     'night-kay': 'nightKay'
   },
@@ -48,6 +52,7 @@ module.exports = {
     ]
   },
   resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: ['src', 'node_modules'],
     alias: {
       constants: path.join(__dirname, '../src/constants')
@@ -57,8 +62,11 @@ module.exports = {
     rules: rules.concat([
       {
         test: /\.jsx?$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/
+        use: ['babel-loader']
+      },
+      {
+        test: /\.tsx?$/,
+        use: ['ts-loader']
       },
       {
         test: /\.css$/,
@@ -139,24 +147,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif)$/,
+        test: /\.(jpe?g|png|gif|svg)$/,
         loader: 'url-loader',
         options: {
           // Inline files smaller than 10 kB (10240 bytes)
           limit: 10 * 1024,
           name: 'image/[hash].[ext]'
-        }
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-url-loader',
-        options: {
-          // Inline files smaller than 10 kB (10240 bytes)
-          limit: 10 * 1024,
-          name: 'image/[hash].[ext]',
-          // Remove the quotes from the url
-          // (they’re unnecessary in most cases)
-          noquotes: true
         }
       }
       // {

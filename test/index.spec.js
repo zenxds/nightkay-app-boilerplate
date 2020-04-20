@@ -3,7 +3,7 @@ import {
   MemoryRouter as Router
 } from 'react-router-dom'
 
-import { startsWith } from '../src/utils'
+import { API_SERVER } from '../src/constants'
 
 // import Header from '../src/components/Header'
 
@@ -14,6 +14,6 @@ import { startsWith } from '../src/utils'
 // })
 
 
-test('startsWith', () => {
-  expect(startsWith('www.taobao.com', 'www.taobao')).toBeTruthy()
+test('API_SERVER', () => {
+  expect(API_SERVER).toBeTruthy()
 })

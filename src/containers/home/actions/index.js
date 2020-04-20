@@ -1,5 +1,5 @@
 import nightKay from 'night-kay'
-import * as constants from '../constants'
+// import * as constants from '../constants'
 import store from '../store'
 
 const BaseActions = nightKay.require('BaseActions')

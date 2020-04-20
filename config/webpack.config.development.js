@@ -15,6 +15,7 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: ['src', 'node_modules'],
     alias: {
       constants: path.join(__dirname, '../src/constants')
@@ -27,8 +28,12 @@ module.exports = {
     'mobx': 'MobX',
     'mobx-react': 'MobXReact',
     'antd': 'antd',
+    '@dx/xbee': 'xbee',
+    '@dx/xpanda': 'xpanda',
     '@antv/g2': 'G2',
     '@antv/data-set': 'DataSet',
+    'd3': 'D3',
+    'moment': 'moment',
     'axios': 'axios',
     'night-kay': 'nightKay'
   },
@@ -36,8 +41,11 @@ module.exports = {
     rules: rules.concat([
       {
         test: /\.jsx?$/,
-        use: ['babel-loader', 'eslint-loader'],
-        exclude: /node_modules/
+        use: ['babel-loader', 'eslint-loader']
+      },
+      {
+        test: /\.tsx?$/,
+        use: ['ts-loader']
       },
       {
         test: /\.css$/,

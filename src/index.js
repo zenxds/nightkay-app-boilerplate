@@ -7,6 +7,6 @@ nightKay.registerRoutes('relation', [
   {
     path: '/home',
     exact: true,
-    component: require('bundle-loader?lazy!./containers/home')
-  }
+    component: require('bundle-loader?lazy!./containers/home'),
+  },
 ])

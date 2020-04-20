@@ -45,7 +45,7 @@ module.exports = {
       "warn",
       "single"
     ],
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "no-console": [
       "error",
       {
@@ -68,10 +68,10 @@ module.exports = {
     ],
     "eol-last": "warn",
     "comma-dangle": [
-      "error",
-      "never"
+      "warn",
+      "always-multiline"
     ],
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "warn"
   }
 }
