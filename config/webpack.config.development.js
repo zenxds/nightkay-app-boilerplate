@@ -5,20 +5,53 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const dxMock = require('dx-mock')
 
 const rules = require('./webpack.rules')
-module.exports = {
+
+const vendorConfig = {
   mode: 'development',
-  entry: ['react-hot-loader/patch', './src/index.js'],
+  entry: [
+    'core-js/stable',
+    'regenerator-runtime/runtime',
+    './src/vendor.js'
+  ],
+  output: {
+    path: path.join(__dirname, '../build'),
+    filename: 'vendor.js'
+  },
+  devtool: 'cheap-module-eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.tsx?$/,
+        use: ['ts-loader']
+      },
+    ]
+  }
+}
+
+const mainConfig = {
+  mode: 'development',
+  entry: {
+    index: './src/index.js',
+    main: ['react-hot-loader/patch', './src/main.js']
+  },
   output: {
     path: path.join(__dirname, '../build'),
     jsonpFunction: 'webpackJsonp' + Date.now(),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: ['src', 'node_modules'],
     alias: {
-      constants: path.join(__dirname, '../src/constants')
+      '@constants': resolve('constants'),
+      '@utils': resolve('utils'),
+      '@components': resolve('components'),
+      '@decorators': resolve('decorators'),
     }
   },
   externals: {
@@ -27,14 +60,12 @@ module.exports = {
     'react-router-dom': 'ReactRouterDOM',
     'mobx': 'MobX',
     'mobx-react': 'MobXReact',
-    'antd': 'antd',
     '@dx/xbee': 'xbee',
     '@dx/xpanda': 'xpanda',
     '@antv/g2': 'G2',
     '@antv/data-set': 'DataSet',
     'd3': 'D3',
     'moment': 'moment',
-    'axios': 'axios',
     'night-kay': 'nightKay'
   },
   module: {
@@ -70,7 +101,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        exclude: /(node_modules|antd)/,
+        exclude: /(node_modules|xbee|xpanda)/,
         use: [
           'style-loader',
           {
@@ -98,7 +129,7 @@ module.exports = {
         ]
       },
       {
-        test: /antd\.less$/,
+        test: /(xbee|xpanda)\.less$/,
         use: [
           'style-loader',
           'css-loader',
@@ -118,6 +149,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: false,
       template: fs.existsSync(path.join(__dirname, '../template/index.dev.html')) ? 'template/index.dev.html' : 'template/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
@@ -145,3 +177,12 @@ module.exports = {
     }
   }
 }
+
+function resolve(p) {
+  return path.join(__dirname, '../src', p)
+}
+
+module.exports = [
+  mainConfig,
+  vendorConfig
+]

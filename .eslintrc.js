@@ -72,6 +72,6 @@ module.exports = {
       "always-multiline"
     ],
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "warn"
+    "react/prop-types": "off"
   }
 }

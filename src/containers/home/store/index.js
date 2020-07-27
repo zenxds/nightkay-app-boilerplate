@@ -1,7 +1,7 @@
 import { observable } from 'mobx'
 
 class Store {
-  @observable msg = ''
+  @observable helloMsg = ''
 }
 
 export default new Store()

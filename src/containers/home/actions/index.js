@@ -1,9 +1,12 @@
-import nightKay from 'night-kay'
-// import * as constants from '../constants'
+import BaseActions from '@components/BaseActions'
+
+import * as constants from '../constants'
 import store from '../store'
 
-const BaseActions = nightKay.require('BaseActions')
-
-class Actions extends BaseActions {}
+class Actions extends BaseActions {
+  getMsg = () => {
+    return this.get(constants.API_GET_MSG)
+  }
+}
 
 export default new Actions(store)

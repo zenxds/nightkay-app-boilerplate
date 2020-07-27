@@ -73,3 +73,4 @@ tmp
 # tsconfig.json
 
 build/
+index.dev.html

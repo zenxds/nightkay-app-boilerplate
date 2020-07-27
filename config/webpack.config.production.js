@@ -12,7 +12,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const rules = require('./webpack.rules')
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'main.js',
@@ -25,14 +25,12 @@ module.exports = {
     'react-router-dom': 'ReactRouterDOM',
     'mobx': 'MobX',
     'mobx-react': 'MobXReact',
-    'antd': 'antd',
     '@dx/xbee': 'xbee',
     '@dx/xpanda': 'xpanda',
     '@antv/g2': 'G2',
     '@antv/data-set': 'DataSet',
     'd3': 'D3',
     'moment': 'moment',
-    'axios': 'axios',
     'night-kay': 'nightKay'
   },
   optimization: {
@@ -55,7 +53,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: ['src', 'node_modules'],
     alias: {
-      constants: path.join(__dirname, '../src/constants')
+      '@constants': resolve('constants'),
+      '@utils': resolve('utils'),
+      '@components': resolve('components'),
+      '@decorators': resolve('decorators'),
     }
   },
   module: {
@@ -92,7 +93,7 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        exclude: /(node_modules|antd)/,
+        exclude: /(node_modules|xbee|xpanda)/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -120,7 +121,7 @@ module.exports = {
         ]
       },
       {
-        test: /antd\.less$/,
+        test: /(xbee|xpanda)\.less$/,
         loader: [
           MiniCssExtractPlugin.loader,
           {
@@ -193,10 +194,9 @@ module.exports = {
       chunkFilename: '[name].[hash].css',
       filename: '[name].css'
     }),
-    new HtmlWebpackPlugin({
-      template: 'template/index.prod.html',
-      hash: true,
-      random: Math.random().toString().slice(2)
-    })
   ]
+}
+
+function resolve(p) {
+  return path.join(__dirname, '../src', p)
 }
