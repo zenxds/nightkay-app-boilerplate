@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react'
+import { Layout } from '@dx/xbee'
 
 import * as decorators from '@decorators'
 import actions from './actions'
@@ -24,6 +25,10 @@ export default class Page extends Component {
   }
 
   render() {
-    return <div>{this.props.store.helloMsg}</div>
+    return (
+      <Layout.DxMain title="Home">
+        <div>{this.props.store.helloMsg}</div>
+      </Layout.DxMain>
+    )
   }
 }
