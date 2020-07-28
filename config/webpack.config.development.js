@@ -6,37 +6,11 @@ const dxMock = require('dx-mock')
 
 const rules = require('./webpack.rules')
 
-const vendorConfig = {
-  mode: 'development',
-  entry: [
-    'core-js/stable',
-    'regenerator-runtime/runtime',
-    './src/vendor.js'
-  ],
-  output: {
-    path: path.join(__dirname, '../build'),
-    filename: 'vendor.js'
-  },
-  devtool: 'cheap-module-eval-source-map',
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: ['babel-loader']
-      },
-      {
-        test: /\.tsx?$/,
-        use: ['ts-loader']
-      },
-    ]
-  }
-}
-
-const mainConfig = {
+module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    main: ['react-hot-loader/patch', './src/main.js']
+    index: ['react-hot-loader/patch', './src/index.js'],
+    main: './src/main.js'
   },
   output: {
     path: path.join(__dirname, '../build'),
@@ -52,20 +26,21 @@ const mainConfig = {
       '@utils': resolve('utils'),
       '@components': resolve('components'),
       '@decorators': resolve('decorators'),
+      // 'react-dom': '@hot-loader/react-dom',
     }
   },
   externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-    'react-router-dom': 'ReactRouterDOM',
-    'mobx': 'MobX',
-    'mobx-react': 'MobXReact',
-    '@dx/xbee': 'xbee',
-    '@dx/xpanda': 'xpanda',
-    '@antv/g2': 'G2',
-    '@antv/data-set': 'DataSet',
-    'd3': 'D3',
-    'moment': 'moment',
+    // 'react': 'React',
+    // 'react-dom': 'ReactDOM',
+    // 'react-router-dom': 'ReactRouterDOM',
+    // 'mobx': 'MobX',
+    // 'mobx-react': 'MobXReact',
+    // '@dx/xbee': 'xbee',
+    // '@dx/xpanda': 'xpanda',
+    // '@antv/g2': 'G2',
+    // '@antv/data-set': 'DataSet',
+    // 'd3': 'D3',
+    // 'moment': 'moment',
     'night-kay': 'nightKay'
   },
   module: {
@@ -181,8 +156,3 @@ const mainConfig = {
 function resolve(p) {
   return path.join(__dirname, '../src', p)
 }
-
-module.exports = [
-  mainConfig,
-  vendorConfig
-]

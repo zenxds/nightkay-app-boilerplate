@@ -1,7 +1,9 @@
-// 让webpack找到正确的加载路径
-__webpack_public_path__ = window.nightKay.utils.getPublicPath()
+import nightKay from 'night-kay'
 
-window.nightKay.registerRoutes('app', [
+// 让webpack找到正确的加载路径
+__webpack_public_path__ = nightKay.utils.getPublicPath()
+
+nightKay.registerRoutes('app', [
   {
     path: '/home',
     exact: true,
