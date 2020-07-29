@@ -46,13 +46,13 @@ module.exports = {
   module: {
     rules: rules.concat([
       {
-        test: /\.jsx?$/,
+        test: /\.(js|ts)x?$/,
         use: ['babel-loader', 'eslint-loader']
       },
-      {
-        test: /\.tsx?$/,
-        use: ['ts-loader']
-      },
+      // {
+      //   test: /\.tsx?$/,
+      //   use: ['ts-loader']
+      // },
       {
         test: /\.css$/,
         use: [
