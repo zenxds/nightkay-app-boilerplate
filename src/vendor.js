@@ -1,4 +1,5 @@
 import BaseActions from '@dx/dx-actions'
+import * as request from '@dx/dx-request'
 
 // window.React = require('react')
 // window.ReactDOM = require('react-dom')
@@ -13,6 +14,7 @@ window.nightKay = require('night-kay')
 // window.xpanda = require('@dx/xpanda')
 // window.moment = require('moment')
 
+window.nightKay.define('request', request)
 window.nightKay.define('BaseActions', BaseActions)
 window.nightKay.define('constants', {
   API_SERVER: '',
