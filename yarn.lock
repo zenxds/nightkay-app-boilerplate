@@ -7568,10 +7568,10 @@ nice-try@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/nice-try/-/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
 
-night-kay@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.npmjs.org/night-kay/-/night-kay-0.3.3.tgz#4de5e26867503336c7782b9ca90aeabc66378085"
-  integrity sha512-5McJKjSJbbFuWAQggugGTdkBVgMiuBby5NioUin+G9DIIHXhWQNW8nGpVwo12mibxy5g9SXH84j35Qsfa361tg==
+night-kay@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.npm.taobao.org/night-kay/download/night-kay-0.3.4.tgz#818a05f49b2a51a6e238ebccd82a49723873bd64"
+  integrity sha1-gYoF9JsqUabiOOvM2CpJcjhzvWQ=
   dependencies:
     "@types/react-router-dom" "^5.1.4"
 

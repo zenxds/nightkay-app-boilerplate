@@ -80,7 +80,7 @@
     "mobx": "^5.15.4",
     "mobx-react": "6.1.4",
     "moment": "^2.24.0",
-    "night-kay": "^0.3.3",
+    "night-kay": "^0.3.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-less": "^2.0.0",
     "postcss-loader": "^3.0.0",
