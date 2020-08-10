@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "module": "commonjs",
+    "rootDirs": ["src"],
     "moduleResolution": "node",
     "target": "es2017",
-    "jsx": "react",
-    "allowJs": true,
+    "jsx": "preserve",
     "sourceMap": true,
     "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
     "noImplicitThis": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -17,10 +14,10 @@
     "esModuleInterop": true,
     "paths": {
       "@*": ["*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types"]
   },
-  "include": [
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
+  "exclude": [
+    "node_modules"
   ]
 }
