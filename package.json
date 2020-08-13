@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@dx/dx-actions": "^0.1.3",
-    "@dx/hawk-cli": "^0.0.14",
+    "@dx/hawk-cli": "^0.0.21",
     "@dx/xbee": "^0.6.7",
     "@dx/xpanda": "^0.0.17",
     "@types/classnames": "^2.2.10",
