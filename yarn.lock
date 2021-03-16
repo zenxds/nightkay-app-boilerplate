@@ -995,17 +995,17 @@
   resolved "https://registry.dingxiang-inc.com/@dx/dx-actions/download/@dx/dx-actions-0.1.3.tgz#871770b0ddf10a69f6459203d48d4cb653554624"
   integrity sha1-hxdwsN3xCmn2RZID1I1MtlNVRiQ=
 
-"@dx/dx-request@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.dingxiang-inc.com/@dx/dx-request/download/@dx/dx-request-1.1.5.tgz#ac92875a0913a9a96bdfb8abf5488ea321c0840e"
-  integrity sha1-rJKHWgkTqalr37ir9UiOoyHAhA4=
+"@dx/dx-request@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.dingxiang-inc.com/@dx/dx-request/download/@dx/dx-request-1.1.6.tgz#43ca5b3fd1ed98f438515da125ae4ab577b0257c"
+  integrity sha1-Q8pbP9HtmPQ4UV2hJa5KtXewJXw=
   dependencies:
     axios "^0.19.0"
 
-"@dx/hawk-cli@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.dingxiang-inc.com/@dx/hawk-cli/download/@dx/hawk-cli-0.0.41.tgz#b38b435991ab1c28b27d1420c57fc0690517fc8f"
-  integrity sha1-s4tDWZGrHCiyfRQgxX/AaQUX/I8=
+"@dx/hawk-cli@^0.0.45":
+  version "0.0.45"
+  resolved "https://registry.dingxiang-inc.com/@dx/hawk-cli/download/@dx/hawk-cli-0.0.45.tgz#54bd0cd0b99c9f2c605e56f65ce3c0745f6a389f"
+  integrity sha1-VL0M0LmcnyxgXlb2XOPAdF9qOJ8=
   dependencies:
     "@babel/core" "^7.10.1"
     "@babel/plugin-proposal-class-properties" "^7.10.1"
@@ -1014,9 +1014,9 @@
     "@babel/preset-react" "^7.10.1"
     "@babel/preset-typescript" "^7.10.1"
     "@dx/dx-actions" "^0.1.3"
-    "@dx/dx-request" "^1.1.5"
-    "@dx/xbee" "^0.7.8"
-    "@dx/xpanda" "^0.0.31"
+    "@dx/dx-request" "^1.1.6"
+    "@dx/xbee" "^0.8.4"
+    "@dx/xpanda" "^0.0.35"
     "@hot-loader/react-dom" "^16.13.0"
     "@types/react-css-modules" "^4.6.2"
     "@typescript-eslint/eslint-plugin" "^3.2.0"
@@ -1025,6 +1025,7 @@
     babel-loader "^8.1.0"
     babel-plugin-react-css-modules "^5.2.6"
     bundle-loader "^0.5.6"
+    case-sensitive-paths-webpack-plugin "^2.4.0"
     copy-webpack-plugin "^6.0.1"
     core-js "^3.6.5"
     css-loader "^3.5.3"
@@ -1045,7 +1046,7 @@
     mini-css-extract-plugin "^0.9.0"
     mobx "^5.15.4"
     mobx-react "^6.2.2"
-    moment "2.24.0"
+    moment "^2.21.0"
     night-kay "^0.3.4"
     optimize-css-assets-webpack-plugin "^5.0.3"
     postcss-less "^3.1.4"
@@ -1065,22 +1066,22 @@
     webpack-cli "^3.3.11"
     webpack-dev-server "^3.11.0"
 
-"@dx/xbee@^0.7.8":
-  version "0.7.9"
-  resolved "https://registry.dingxiang-inc.com/@dx/xbee/download/@dx/xbee-0.7.9.tgz#3505c0127a50b467975db8ca59678bf4a2f90ff3"
-  integrity sha1-NQXAEnpQtGeXXbjKWWeL9KL5D/M=
+"@dx/xbee@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.dingxiang-inc.com/@dx/xbee/download/@dx/xbee-0.8.4.tgz#4a1ee6220b452ddacd6a7e5e791c330b4cc54d64"
+  integrity sha1-Sh7mIgtFLdrNan5eeRwzC0zFTWQ=
   dependencies:
     antd "~3.26.12"
     chance "^1.1.6"
     classnames "^2.2.6"
     rc-notification "^3.3.1"
 
-"@dx/xpanda@^0.0.31":
-  version "0.0.31"
-  resolved "https://registry.dingxiang-inc.com/@dx/xpanda/download/@dx/xpanda-0.0.31.tgz#7b2bfd495eb3ed539773541af97cf48d9d63ef61"
-  integrity sha1-eyv9SV6z7VOXc1Qa+Xz0jZ1j72E=
+"@dx/xpanda@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.dingxiang-inc.com/@dx/xpanda/download/@dx/xpanda-0.0.35.tgz#7fe70c56fd35030f75e65f2236105d11a8b87a4e"
+  integrity sha1-f+cMVv01Aw915l8iNhBdEai4ek4=
   dependencies:
-    "@dx/dx-request" "^1.1.5"
+    "@dx/dx-request" "^1.1.6"
     classnames "~2.2.6"
     get-value "^3.0.1"
     lodash.isequal "^4.5.0"
@@ -2341,6 +2342,11 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
   version "1.0.30001112"
   resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001112.tgz?cache=0&sync_timestamp=1596773237786&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001112.tgz#0fffc3b934ff56ff0548c37bc9dad7d882bcf672"
   integrity sha1-D//DuTT/Vv8FSMN7ydrX2IK89nI=
+
+case-sensitive-paths-webpack-plugin@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz#db64066c6422eed2e08cc14b986ca43796dbc6d4"
+  integrity sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==
 
 caw@^2.0.1:
   version "2.0.1"
@@ -6493,15 +6499,15 @@ mobx@^5.15.4:
   resolved "https://registry.npm.taobao.org/mobx/download/mobx-5.15.5.tgz#69715dc8662f64d153309bfe95169b8df4b4be4b"
   integrity sha1-aXFdyGYvZNFTMJv+lRabjfS0vks=
 
-moment@2.24.0:
-  version "2.24.0"
-  resolved "https://registry.npmjs.org/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-
 moment@2.x, moment@^2.24.0:
   version "2.27.0"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
   integrity sha1-i/9OPiaiNiIN/j423nVrbrqgEF0=
+
+moment@^2.21.0:
+  version "2.29.1"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
