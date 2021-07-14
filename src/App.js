@@ -1,6 +1,5 @@
 import React from 'react'
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
-import { hot } from 'react-hot-loader/root'
 import nightKay from 'night-kay'
 
 import Home from './containers/home'
@@ -23,4 +22,4 @@ const App = () => {
   )
 }
 
-export default hot(App)
+export default App

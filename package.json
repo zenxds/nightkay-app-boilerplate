@@ -31,9 +31,10 @@
     "url": ""
   },
   "devDependencies": {
-    "@dx/hawk-cli": "^0.0.45",
+    "@dx/hawk-cli": "^0.0.57",
     "core-js": "^3.6.5",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "unused-webpack-plugin": "^2.4.0"
   },
   "dependencies": {
     "bundle-loader": "^0.5.6"
