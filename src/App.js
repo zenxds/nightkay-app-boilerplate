@@ -1,3 +1,6 @@
+/**
+ * 独立运行时的App
+ */
 import React from 'react'
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 import nightKay from 'night-kay'

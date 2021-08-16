@@ -1,5 +1,5 @@
 /**
- * 入口
+ * 独立运行时的入口
  */
 import React from 'react'
 import ReactDOM from 'react-dom'

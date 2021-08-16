@@ -1,3 +1,6 @@
+/**
+ * 父应用加载的入口
+ */
 import nightKay from 'night-kay'
 
 // 让webpack找到正确的加载路径
